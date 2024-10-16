@@ -1,0 +1,13 @@
+tasks:
+  - name: Start Halo
+    init: |
+      curl -fsSL https://raw.githubusercontent.com/halo-sigs/gitpod/refs/heads/main/docker-compose.yml > docker-compose.yml
+      docker compose pull
+    command: |
+      docker compose up
+
+ports:
+  - name: Halo
+    description: Halo Service Port
+    port: 8090
+    visibility: public
