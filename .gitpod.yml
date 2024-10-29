@@ -1,7 +1,6 @@
 tasks:
   - name: Start Halo
     init: |
-      curl -fsSL https://raw.githubusercontent.com/halo-sigs/gitpod-demo/refs/heads/main/docker-compose.yml > docker-compose.yml
       docker compose pull
     command: |
       docker compose up
